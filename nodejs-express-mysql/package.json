@@ -1,0 +1,17 @@
+{
+  "name": "nodejs-express-mysql",
+  "version": "1.0.0",
+  "description": "restful CRUD API",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eolsen",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "express-validator": "^6.14.2",
+    "mysql": "^2.18.1"
+  }
+}
