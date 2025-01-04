@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<main class="">
+    <div class="row align-items-end justify-content-end">
+
+           <div class="col-8 align-self-end">
+              <input id="searchInput" type="text" class="form control form-control-sm" placeholder="Search...">
+              <button id="clearSearch" class="btn btn-primary">Clear</button>
+              <button id="addItem" class="btn btn-primary">Add Team</button>
+            </div>
+       
+        </div>
+      <div class="col-12">
+        <div id="<%=view.alertContainerId%>" class="mt-2"></div>
+        <div id="tableContainer" class="mt-2">
+  
+        </div>
+        <!-- <button id="resetView" class="btn btn-primary clear-search-btn ml-2">Reset View</button> -->
+      </div>
+    </div>
+  </main>
+  
+  <div class="modal" id="myModal" style>
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Delete Item?</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          This action cannot be undone!
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <!-- data-bs-dismiss="modal" tells the javscript to hide the modal on click, both 'Yes' and 'No' buttons will hide modal.  I'm placing a specific event handler on the 'Yes' button below-->
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">No</button>
+          <button id="yesButton" type="button" class="btn btn-primary" data-bs-dismiss="modal">Yes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+        <div class="modal " id="formModal" tabindex="-1" role="dialog" >
+          <div class="modal-dialog">
+            <div class="modal-content" >
+        
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title">edit Item?</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+        
+              <!-- Modal body -->
+              <div class="modal-body">
+                edit 
+              </div>
+        
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <!-- data-bs-dismiss="modal" tells the javscript to hide the modal on click, both 'Yes' and 'No' buttons will hide modal.  I'm placing a specific event handler on the 'Yes' button below-->
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">No</button>
+                <button id="saveButton" type="button" class="btn btn-primary" data-bs-dismiss="modal">save</button>
+              </div>
+            </div>
+          </div>
+        </div>

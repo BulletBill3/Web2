@@ -1,0 +1,90 @@
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="formModalLabel">Edit <%=view._data.name%>
+      </h5>
+      <button type="button" id="closeForm" class="btn-close" data-bs-dismiss="modal"></button>
+    </div>
+    <div class="modal-body">
+      <form id="myForm" novalidate>
+        <div class="container">
+          <div class="row">
+            <div class="form-row">
+              <div class="col ">
+                <label for="id">
+                  Team ID
+                </label>
+                <input type="text" size ="3" id="id" name="id" placeholder="x" value="<%=view._data.id %>" readonly>
+              </div>
+              <div class="col ">
+                <label for="coachid">
+                  Coach ID
+                </label>
+                <input type="text" size ="3" id="coachid" name="coach_id" placeholder="x" value="<%=view._data.coach_id %>"
+                  readonly>
+              </div>
+              <div class="col">
+                <label for="leagueid">
+                  League ID
+                </label>
+                <input type="text" size ="3" id="leagueid" name="league_id" placeholder="x" value="<%=view._data.league_id %>"
+                  readonly>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12 mb-6">
+            <label for="validationCustom01">
+              <h5>Team Name</h5>
+            </label>
+            <input type="text" class="form-control" name="name" id="validationCustom01" placeholder="Team Name"
+              value="<%=view._data.name %>" required>
+            <div class="invalid-feedback">
+              Please enter the Team name.
+            </div>
+          </div>
+
+       
+        <div class="form-row">
+          <div class="col-md-12 mb-3">
+            <label for="validationCustom03">
+              <h5>Team Motto</h5>
+            </label>
+
+            <input type="text" class="form-control" name="motto" id="validationCustom03" placeholder="motto"
+              value="<%=view._data.motto %>" required>
+            <div class="invalid-feedback">
+              Please enter a valid phone number.
+            </div>
+          </div>
+          <div class="col-md-12 mb-3">
+            <label for="numPlayers">
+              <h5>Notes</h5>
+            </label>
+
+            <input type="text" class="form-control" id="numPlayers" name="notes" placeholder="notes"
+              value="<%=view._data.notes%>" required>
+            <div class="invalid-feedback">
+              Please select the number of players.
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <button id="cancelButton" type="button" class="btn btn-secondary btn-danger"
+          data-bs-dismiss="modal">Close</button>
+
+        <button id="submitButton" class="btn btn-primary" type="button">Submit form</button>
+      </form>
+    </div>
+
+
+
+  </div>
+  <div class="modal-footer">
+    <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>

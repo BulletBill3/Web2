@@ -1,0 +1,60 @@
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+
+    <div class="modal-header">
+        <div class="modal-title" id="formModalLabel"><h4>Edit <%=view._data.name%></h4>
+        </div>
+        <button type="button" id="closeForm" class="btn-close" data-bs-dismiss="modal"></button>
+     </div>
+    <div class="modal-body">
+        <div class="container px-4">
+        <form id='<%=viewModel.id%>'>
+            <%let copy = view._data;%>
+            <%let valueArray =[]; valueArray.push(view._data.id); valueArray.push(view._data.name); valueArray.push(view._data.coach_id); valueArray.push(view._data.league_id); valueArray.push(view._data.motto); valueArray.push(view._data.notes)%>
+            <%let i = 0;%>
+            <% view.viewModel.fields.forEach( function(fields, key){ %>
+                <div class="row g-1">
+                <div class="col">
+                <%let value = valueArray[i];%>
+                <%if(fields.lookupName) {%>
+                    <label id ="<%=fields.attributes.id%>" class="col-4"><h5><%=fields.label%> </h5> </label>
+
+                    <%let coachArray = view.storage.lookup(fields.lookupName)%>
+                    <select name = "<%=fields.attributes.name%>">
+                    <%for (let j = 0; j < coachArray.length; j++) { %>
+                        <%let sel = "";%>
+                        <%if(coachArray[j].value === value){%>
+                            <%sel = "selected";%>
+                            <%}%>
+                            <option value="<%=coachArray[j].value%>" <%=sel%>><%=coachArray[j].label%></option>
+                            <%sel = "";%>
+
+                      <%}%>
+                      <%i += 1;%>
+                    </select>
+                    
+                <% } else{%>
+                
+                    
+                <label id ="<%=fields.attributes.id%>" class="col-4"><h5><%=fields.label%> </h5> </label>
+                
+
+                <input type = "<%=fields.tag%>" class="col-8" id = "<%=fields.attributes.id%>" name = "<%=fields.attributes.name%>" value = "<%=value%>" placeholder = "<%=fields.attributes.placeholder%>" <%=fields.attributes.readOnly%> >
+                <%i += 1;%>    
+            </div>
+            </div>
+        <% }  } ) %>
+        </form>
+    </div>
+    </div>
+    
+
+    <div class = "modal-footer">
+        <button id="cancelButton" type="button" class="btn btn-secondary btn-danger"
+        data-bs-dismiss="modal">Close</button>
+
+        <button id="submitButton" class="btn btn-primary" type="button">Submit form</button>
+    </div>
+</div>
+</div>
+ 

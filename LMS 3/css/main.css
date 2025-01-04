@@ -1,0 +1,90 @@
+.title {
+  text-align: center;
+  background-color: rgb(230, 0, 18);
+}
+
+.row #marioHeader {
+  border-radius: 50%;
+  height: 200px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#home {
+  background-color: whitesmoke;
+  opacity: 90%;
+  padding: 20px;
+  min-height: 600px;
+}
+
+#Teams {
+  padding: 20px;
+  min-height: 600px;
+}
+
+#podium {
+  height: 100px;
+}
+
+#teamsHeader {
+  align-content: center;
+  text-align: center;
+  background-color: whitesmoke;
+  opacity: 85%;
+  padding: 15px;
+}
+
+h1 {
+  margin-top: 75px;
+  margin-left: 35px;
+}
+
+aside {
+  width: 35%;
+  padding-left: 15px;
+  margin-left: 15px;
+  float: right;
+  font-style: italic;
+  background-color: rgb(136, 136, 136);
+  opacity: 100%;
+}
+
+.button {
+  background: transparent;
+  filter: invert(1);
+  border-radius: 40%;
+}
+
+h1 {
+  border-style: double;
+  border-color: white;
+  border-width: 9px;
+  border-radius: 20px;
+  color: white;
+  padding: 15px;
+}
+
+.backbody {
+  background-size: cover;
+  background-color: rgb(255, 255, 255);
+  background-image: url("/img/wallpaper.jpg");
+  background-repeat: repeat;
+}
+
+#navBar {
+  background-color: rgb(255, 255, 255);
+  padding-left: 35px;
+  padding-top: 10px;
+}
+
+footer {
+  background-color: rgb(46, 46, 46);
+  height: 100px;
+  color: white;
+  text-align: middle;
+  position: absolute;
+}
+
+#footerNote {
+  font-size: x-small;
+}/*# sourceMappingURL=main.css.map */
